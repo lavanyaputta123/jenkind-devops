@@ -19,9 +19,19 @@ pipeline {
 			 } 
 			 
 		 }
-	 }  
-		echo "Build"
-		echo "Test"
-		echo "Integration Test"
+	 } 
+	 
+	  
+		post {
+			always {
+				echo 'i am awesome. i run always'
+			}
+			success {
+				echo 'i run u are succesful'
+			}
+			failure {
+				echo 'i run u are fail'
+			}
+		}
 	}
 
